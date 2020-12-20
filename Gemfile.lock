@@ -4,6 +4,7 @@ PATH
     ledger_sync-netsuite_soap (0.1.1)
       dotenv
       ledger_sync (~> 1.7.0)
+      netsuite (~> 0.8.6)
       nokogiri
       oauth2
 
