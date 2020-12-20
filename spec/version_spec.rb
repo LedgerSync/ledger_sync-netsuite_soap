@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe LedgerSync::NetsuiteSOAP do
+RSpec.describe LedgerSync::NetSuiteSOAP do
   it { expect(described_class).to respond_to(:version) }
   it { expect(described_class.version(pre: true)).to include('.pre.') }
 end

@@ -3,21 +3,22 @@
 require_relative '../operation'
 
 module LedgerSync
-  module NetsuiteSOAP
+  module NetSuiteSOAP
     class Operation
       class Create
-        include NetsuiteSOAP::Operation::Mixin
+        include NetSuiteSOAP::Operation::Mixin
 
         private
 
         def operate
-          response_to_operation_result(
-            response: client.post(
-              path: ledger_resource_type_for_path,
-              payload: [
-                serializer.serialize(resource: resource)
-              ]
-            )
+          response = client.post(
+            resource: netsuite_online_resource_type,
+            payload: serializer.serialize
+          )
+
+          success(
+            resource: serializer.deserialize(hash: response),
+            response: response
           )
         end
       end

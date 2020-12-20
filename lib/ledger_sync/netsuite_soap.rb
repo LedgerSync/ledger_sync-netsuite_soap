@@ -3,7 +3,7 @@
 require 'ledger_sync'
 
 module LedgerSync
-  module NetsuiteSOAP
+  module NetSuiteSOAP
     def self.root(*paths)
       File.join(File.expand_path('../..', __dir__), *paths.map(&:to_s))
     end

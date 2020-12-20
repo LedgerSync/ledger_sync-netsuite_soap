@@ -2,7 +2,7 @@
 
 # :nocov:
 module LedgerSync
-  module NetsuiteSOAP
+  module NetSuiteSOAP
     VERSION = '0.1.1'
 
     def self.version(args = {})

@@ -4,7 +4,7 @@ core_support :operation_shared_examples
 support :netsuite_soap_helpers
 
 RSpec.shared_examples 'a netsuite_soap operation' do
-  include NetsuiteSOAPHelpers
+  include NetSuiteSOAPHelpers
 
   let(:resource) { FactoryBot.create("#{client.class.config.root_key}_#{record}") } unless method_defined?(:resource)
   let(:client) { netsuite_soap_client } unless method_defined?(:client)

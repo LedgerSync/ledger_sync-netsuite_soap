@@ -6,7 +6,7 @@ require 'ledger_sync/netsuite_soap/version'
 
 Gem::Specification.new do |spec|
   spec.name = 'ledger_sync-netsuite_soap'
-  spec.version = LedgerSync::NetsuiteSOAP::VERSION
+  spec.version = LedgerSync::NetSuiteSOAP::VERSION
   spec.authors = ['Modern Treasury']
   spec.email = ['ledgersync@moderntreasury.com']
 
@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'Sync common objects to accounting software.'
   spec.description = 'LedgerSync is a simple library that allows you to sync common objects to popular accounting '\
-                     'software like QuickBooks Online, NetsuiteSOAP, NetSuite, etc.'
+                     'software like QuickBooks Online, NetSuiteSOAP, NetSuite, etc.'
   spec.homepage = 'https://www.ledgersync.dev'
 
   # Specify which files should be added to the gem when it is released.
@@ -37,6 +37,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency('rake', '~> 13.0')
   spec.add_development_dependency('rspec', '~> 3.2')
   spec.add_development_dependency('rubocop', '>= 0')
+  spec.add_development_dependency('vcr', '>= 0')
   spec.add_development_dependency('webmock', '>= 0')
   spec.add_runtime_dependency('dotenv')
   spec.add_runtime_dependency('ledger_sync', '~> 1.7.0')
